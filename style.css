@@ -19,8 +19,8 @@ a{
     height: 80px;
     width: 250px;
     background: linear-gradient(
-      #6872ff,
-      #6872ff
+      #b073ff,
+      #b073ff
     );
     position: absolute;
     margin: auto;
@@ -35,5 +35,26 @@ a{
     font-weight: 500;
     text-decoration: none;
     letter-spacing: 1px;
-    border-radius: 19px;
+    border-radius: 50px;
   }
+
+  input[type="date"]{
+    background-color: #b073ff;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 35%;
+    left: 50%;
+    font-family: "Poppins",sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #b073ff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
