@@ -1,4 +1,6 @@
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +9,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>this is a title</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
 
-    <input type="date">
+
 
     <h1 style="color:#c42eff;background-color: #dc82ff;padding: 6px;text-align:center;">Some random Heading</h1>
-    <form>
-        <input class="from-control" type="datetime-local" placeholder="Select DateTime">
-    </form>
+        <div id="MyClockDisplay" class="clock"></div>
+        <script>
+
+            function showTime(){
+                var date = new Date();
+                var h = date.getHours();
+                var m = date.getMinutes();
+                var s = date.getSeconds();
+                var session = "AM";
+
+                if(h == 0){
+                    h = 12;
+                }
+
+                if(h > 12){
+                    h = h - 12;
+                    session = "PM"
+                }
+
+                h = (h < 10) ? "0" + h : h;
+                m = (m < 10) ? "0" + m : m;
+
+                var time = h + ":" + m + " " + session;
+                document.getElementById("MyClockDisplay").innerText = time;
+                document.getElementById("MyClockDisplay").textContent = time;
+
+                setTimeout(showTime, 1000);
+            }
+
+            showTime();
+
+        </script>
         <h2 style="padding: 9px;text-align:center;">Another random Heading</h2>
         <p style="padding: 9px;text-align:center;">Stuff and stuff</p>
         <p style="padding: 9px;text-align:center;">More stuff and stuff</p>
@@ -29,14 +59,6 @@
 
     <p style="padding: 9px;text-align:center;">Click here for my code.</p>
     <a href="https://github.com/HenryFrom2007/my-2nd-webthingy" target="_blank">Code that I used</a>
-
-    <script></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-    <script>
-        flatpickr("input[type=datetime-local]", {});
-    </script>
 
 </body>
 </html>

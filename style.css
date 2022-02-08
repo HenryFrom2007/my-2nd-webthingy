@@ -18,24 +18,20 @@ a{
     display: grid;
     height: 80px;
     width: 250px;
-    background: linear-gradient(
-      #b073ff,
-      #b073ff
-    );
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
+    background: #b073ff;
     bottom: 0;
     place-items: center;
     font-family: "Poppins",sans-serif;
     color: #ffffff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 75%;
+    left: 50%;
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     letter-spacing: 1px;
-    border-radius: 50px;
+    border-radius: 100px;
   }
 
   input[type="date"]{
@@ -43,18 +39,51 @@ a{
     padding: 15px;
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 35%;
-    left: 50%;
+    top: 4.5%;
+    left: 8.5%;
     font-family: "Poppins",sans-serif;
     color: #ffffff;
     font-size: 18px;
     border: none;
     outline: none;
-    border-radius: 30px;
 }
 ::-webkit-calendar-picker-indicator{
     background-color: #b073ff;
     padding: 5px;
     cursor: pointer;
     border-radius: 3px;
+}
+
+input[type="datetime-local"]{
+    width: 250px;}
+
+div.ex1 {
+    overflow: scroll;
+  }
+  
+  div.ex2 {
+    overflow: hidden;
+  }
+  
+  div.ex3 {
+    overflow: auto;
+  }
+  
+  div.ex4 {
+    overflow: visible;
+  }
+
+.clock{
+    display: grid;
+    height: 60px;
+    width: 132px;
+    background: #b073ff;
+    bottom: 0;
+    place-items: center;
+    position: absolute;
+    top: 4.5%;
+    left: 4.5%;
+    transform: translate(-50%) translateY(-50%);
+    color: #ffffff;
+    font-size: 20px;
 }
